@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coming Soon - GoalMate</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-image: url('./assets/coming_soon_bg.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+    header {
+      border-bottom: 1px solid #e5e5e5;
+    }
+  </style>
+<body class="min-h-screen bg-white relative overflow-hidden flex flex-col items-center justify-center p-4">
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full flex justify-between items-center p-4">
+    <img src="./assets/logo.png" alt="Goalmate Logo" class="h-10" />
+    <button
+      onclick="document.getElementById('contactForm').classList.remove('hidden')"
+      class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-2xl shadow-md"
+    >
+      Contact Us
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <div class="text-center mt-18 z-10">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-900">Coming Soon..</h1>
+    <p class="mt-6 text-xl text-gray-500">
+        Join a community of goal-getters and track your progress 
+        <p class="text-xl text-gray-500">
+            while connecting with like-minded individuals.
+        </p>
+    </p>
+    
+
+    <img
+      src="./assets/Person_Icons.png"
+      alt="Users"
+      class="mx-auto my-8 w-72 md:w-[28rem]"
+    />
+
+    <form action="https://formspree.io/f/mkgbjnda" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required
+               class="px-4 py-2 border rounded-md" />
+        <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-2xl shadow-md">
+          Notify Me
+        </button>
+      </form>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div id="contactForm" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="w-full max-w-lg p-6 bg-white rounded-xl shadow-lg relative">
+      <button
+        class="absolute top-2 right-4 text-gray-500 hover:text-gray-700 text-xl"
+        onclick="document.getElementById('contactForm').classList.add('hidden')"
+      >
+        &times;
+      </button>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800">Contact Us</h2>
+      <form
+            action="https://formspree.io/f/xgvyaejd"
+            method="POST"
+            class="space-y-4">
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+        <input
+            type="email"
+            name="_replyto"
+            placeholder="Your Email"
+            required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+        <textarea
+            name="message"
+            placeholder="Please type in your message or query"
+            required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+            rows="4"
+        ></textarea>
+        <button
+            type="submit"
+            class="block mx-auto bg-orange-500 hover:bg-orange-400 text-white font-semibold px-6 py-2 rounded-xl shadow-xl"
+        >
+    Submit
+    </button>
+    </form>
+    </div>
+  </div>
+
+</body>
+</html>
