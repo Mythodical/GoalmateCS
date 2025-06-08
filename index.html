@@ -14,6 +14,8 @@
       background-image: url('./assets/coming_soon_bg.jpg');
       background-position: center;
       background-size: cover;
+      background-repeat: no-repeat;
+  background-attachment: fixed;
     }
     header {
       border-bottom: 1px solid #e5e5e5;
@@ -22,18 +24,23 @@
     @media (max-width: 640px) {
     body {
         background-image: url('./assets/coming_soon_bg_mobile.jpg');
+        background-repeat: no-repeat;
+  background-attachment: fixed;
+    }
+    header {
+      border-bottom: 0px solid #e5e5e5;
     }
     }
   </style>
 </head>
-<body class="min-h-screen bg-white relative overflow-hidden flex flex-col items-center justify-center p-4">
+<body class="min-h-screen relative overflow-hidden flex flex-col items-center justify-center p-4">
 
   <!-- Header -->
   <header class="absolute top-0 left-0 w-full flex justify-between items-center p-4">
-    <img src="./assets/logo.png" alt="Goalmate Logo" class="h-10" />
+    <img src="./assets/logo.png" alt="Goalmate Logo" class="h-8 sm:h-10" />
     <button
       onclick="document.getElementById('contactForm').classList.remove('hidden')"
-      class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-2xl shadow-md"
+      class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-3 py-1 sm:px-5 sm:py-2 rounded-2xl shadow-md"
     >
       Contact Us
     </button>
